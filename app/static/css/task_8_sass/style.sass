@@ -1,0 +1,119 @@
+// Variables
+
+$font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+$primary-color: #212529
+$margin: 5px
+$padding: 5px
+$block-border: 1px solid rgba(86,61,124,.2)
+$header-block-size: 1.2rem
+$body-block-size: 1rem
+$jumbotron-block-size: 2rem
+
+// Mixins
+
+=margin-padding($property)
+  margin: $property
+  padding: $property
+
+=border-black()
+  border: $block-border
+
+=width($width)
+  width: $width
+  -ms-flex: 0 0 $width
+  flex: 0 0 $width
+  max-width: $width
+
+// Styling
+
+body
+  font: 100% $font-stack
+  color: $primary-color
+  font-size: $body-block-size
+  font-weight: 400
+  line-height: 1.5
+  text-align: left
+  background-color: #fff
+
+.jumbotron
+  background-color: #e9ecef
+  margin-bottom: 2rem
+  border-radius: .3rem
+  padding: 4rem 2rem
+  font-size: $jumbotron-block-size
+  font-weight: 300
+  line-height: 1.2
+
+.row
+  margin: $margin
+  display: flex
+
+  .block
+    margin: $margin
+    position: relative
+    width: 100%
+    padding-right: 15px
+    padding-left: 15px
+
+.center
+  margin: 0 auto
+  +width(60%)
+
+.column
+  padding: .75rem 15px .75rem 15px
+  background-color: #e9ecef
+  border-radius: .3rem
+  position: relative
+  width: 100%
+
+.clear-both
+  clear: both
+
+.block
+  +margin-padding(15px)
+
+.column, .block, .jumbotron
+  +border-black()
+
+.block
+  float: right
+
+.paragraph
+  text-indent: 1rem
+  text-align: justify
+
+.text-center
+  text-align: center
+
+.strong
+  font-weight: bold
+
+.block-header
+  display: block
+  font-weight: bold
+  font-size: $header-block-size
+
+// Calculations
+
+footer
+  margin-top: 10px
+  text-align: center
+  background-color: #e9ecef
+  line-height: 600px / 960px * 800%
+
+// Inheritance
+
+%message-shared
+  color: #333
+
+.success
+  @extend %message-shared
+  color: green
+
+.error
+  @extend %message-shared
+  color: red
+
+.warning
+  @extend %message-shared
+  color: #fd7e14
