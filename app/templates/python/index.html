@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}Python: обработка формы{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 align-self-center">
+        <h1>Форма регистрации</h1>
+        <form action="/python" method="post" class="mt-4">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputCountry">Страна</label>
+                    <select id="inputCountry" name="inputCountry" required="required" class="form-control">
+                        <option value="Россия">Россия</option>
+                        <option value="Новая Зеландия">Новая Зеландия</option>
+                        <option value="США">США</option>
+                        <option value="Ирландия">Ирландия</option>
+                        <option value="Германия">Германия</option>
+                        <option value="Исладния">Исладния</option>
+                        <option value="Дания">Дания</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Город</label>
+                    <input type="text" class="form-control" id="inputCity" name="inputCity" required="required">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Индекс</label>
+                    <input type="text" class="form-control" id="inputZip" name="inputZip" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Фактический адрес</label>
+                <input type="text" class="form-control" id="inputAddress" name="inputAddress" required="required"
+                       placeholder="улица, дом, квартира">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Юридический адрес</label>
+                <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" required="required"
+                       placeholder="улица, дом, квартира">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" required="required">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Пароль</label>
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword"
+                           required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="checkRemember">
+                    <label class="form-check-label" for="gridCheck">
+                        Запомнить меня
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+</div>
+
+{% for error in errors %}
+    <h4>{{ error }}</h4>
+{% endfor %}
+
+{% if records %}
+<div class="row mt-5">
+    <h2>Список регистраций</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Страна</th>
+            <th>Город</th>
+            <th>Индекс</th>
+            <th>Фактический адрес</th>
+            <th>Юридический адрес</th>
+            <th>Email</th>
+            <th>Запомнить меня</th>
+            <th>Дата регистрации</th>
+        </tr>
+        </thead>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.country }}</td>
+            <td>{{ record.city }}</td>
+            <td>{{ record.index }}</td>
+            <td>{{ record.address_actual }}</td>
+            <td>{{ record.address_legal }}</td>
+            <td>{{ record.email }}</td>
+            <td>{{ record.remember }}</td>
+            <td>{{ record.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endif %}
+
+{% endblock %}
+

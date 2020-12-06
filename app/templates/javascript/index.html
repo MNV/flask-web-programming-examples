@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/task_3_javascript/styles.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{% block title %}JavaScript: события, DOM, массивы, циклы, отображения и стрелочные функции{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="mt-4">
+    <h2>События</h2>
+</div>
+<div class="row justify-content-center">
+    <div id="block_onmouseover" class="col-lg-6 rounded text-center m-4 p-4 shadow">
+        Наведите курсор на этот блок
+    </div>
+    <div id="block_click" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Кликните по этому блоку
+    </div>
+    <div id="block_onmousedown" class="col-lg-6 rounded text-center m-4 p-4 shadow">
+        Нажмите на этот блок
+    </div>
+</div>
+<div class="mt-4">
+    <h2>DOM</h2>
+</div>
+<div id="new_blocks" class="row justify-content-center">
+    <div id="block_add" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Кликните, чтобы добавить новый блок
+    </div>
+</div>
+<div class="mt-4">
+    <h2>Массивы и циклы</h2>
+</div>
+<div class="row justify-content-center">
+    <div id="block_calculations" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Таблица умножения
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div id="block_while" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Обработка последовательности
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div id="block_dowhile" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        А теперь в обратном порядке 🙂
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div id="block_foreach" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Перебор элементов
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div id="block_map" class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        Информация о студентах
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ super() }}
+
+<script src="{{ url_for('static', filename='js/task_3_javascript/script.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <title>{{title}}</title>
+</head>
+<body>
+{{> menu}}
+<div class="container">
+    <div class="mt-4">
+        <h1>{{title}}</h1>
+        <h2>{{description}}</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 rounded m-4 p-4 shadow">
+            GET-параметры запроса:
+            <ul>
+                {{#each queryParameters}}
+                    <li>{{@key}}: {{this}}</li>
+                {{/each}}
+            </ul>
+            <small class="text-muted">Для задания параметров укажите их в строке к запросу этой страницы (например,
+                "?parameterName=value").</small>
+        </div>
+    </div>
+</div>
+{{> footer}}
+</body>
+</html>

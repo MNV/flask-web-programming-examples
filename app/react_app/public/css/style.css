@@ -1,0 +1,38 @@
+.torch {
+    width: 50px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+
+}
+
+.torch-fire {
+    background: url(../img/torch-fire.gif) center center no-repeat #ffffff;
+}
+
+.torch-silent {
+    background: url(../img/torch-silent.png) center 44px no-repeat #ffffff;
+    background-size: 34px 48px;
+    padding-bottom: 5px;
+}
+
+.lamp {
+    width: 500px;
+    height: 200px;
+    margin: 0 auto 10px auto;
+    background-color: #fefefe;
+    max-width: 100%;
+}
+
+.lamp-light {
+    background: url(../img/lamp-light.gif) center center no-repeat #ffffff;
+    background-size: 500px;
+    padding-bottom: 5px;
+    margin-top: -30px;
+}
+
+.lamp-static {
+    background: url(../img/lamp-static.png) center top no-repeat #ffffff;
+    background-size: 500px;
+    padding-bottom: 5px;
+    margin-top: -25px;
+}

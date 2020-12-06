@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}HTML: таблицы{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+
+    <h1>Расписание занятий</h1>
+    <h2>Группа ПИ-18У</h2>
+
+    <div class="row mt-4">
+        <div class="col align-self-center table-responsive">
+            <table class="table table-hover">
+                <caption>Расписание занятий для группы ПИ-18У</caption>
+                <thead>
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Время</th>
+                    <th scope="col">Дисциплина</th>
+                    <th scope="col">Преподаватель</th>
+                    <th scope="col">Тип</th>
+                    <th scope="col">Корпус</th>
+                    <th scope="col">Аудитория</th>
+                </tr>
+                </thead>
+                <tr class="table-info">
+                    <td colspan="7">Пятница, 20 ноября</td>
+                </tr>
+                <tr>
+                    <th scope="row">1.</th>
+                    <td>17:10-18.30</td>
+                    <td>Общий и стратегический менеджмент</td>
+                    <td>Гергерт Д.В.</td>
+                    <td>Лекция</td>
+                    <td>2</td>
+                    <td>115</td>
+                </tr>
+                <tr>
+                    <th scope="row">2.</th>
+                    <td>18:40-20:00</td>
+                    <td>Общий и стратегический менеджмент</td>
+                    <td>Гергерт Д.В.</td>
+                    <td>Лекция</td>
+                    <td>2</td>
+                    <td>115</td>
+                </tr>
+                <tr>
+                    <th scope="row">3.</th>
+                    <td>20:10-21:30</td>
+                    <td>Общий и стратегический менеджмент ЭКЗАМЕН</td>
+                    <td>Гергерт Д.В.</td>
+                    <td>Практика</td>
+                    <td>2</td>
+                    <td>115</td>
+                </tr>
+                <tr class="table-info">
+                    <td colspan="7">Суббота, 21 ноября</td>
+                </tr>
+                <tr>
+                    <th scope="row">1.</th>
+                    <td>9.10-10.30</td>
+                    <td>Конструирование программного обеспечения</td>
+                    <td>Ланин В.В.</td>
+                    <td>Практика</td>
+                    <td>3</td>
+                    <td>504</td>
+                </tr>
+                <tr>
+                    <th scope="row">2.</th>
+                    <td>10.40-12.00</td>
+                    <td>Конструирование программного обеспечения</td>
+                    <td>Ланин В.В.</td>
+                    <td>Практика</td>
+                    <td>3</td>
+                    <td>504</td>
+                </tr>
+                <tr>
+                    <th scope="row">3.</th>
+                    <td>12:40-14.00</td>
+                    <td>Теория вероятностей и математическая статистика</td>
+                    <td>Радионова М.В.</td>
+                    <td>Лекция</td>
+                    <td>2</td>
+                    <td>309</td>
+                </tr>
+                <tr>
+                    <th scope="row">4.</th>
+                    <td>14.10-15.30</td>
+                    <td>Теория вероятностей и математическая статистика</td>
+                    <td>Радионова М.В.</td>
+                    <td>Лекция</td>
+                    <td>2</td>
+                    <td>309</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}HTML: формы{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 align-self-center">
+        <h1>Форма регистрации</h1>
+        <form class="mt-4">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputState">Страна</label>
+                    <select id="inputState" class="form-control">
+                        <option>Россия</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Город</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Индекс</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Фактический адрес</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="улица, дом, квартира">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Юридический адрес</label>
+                <input type="text" class="form-control" id="inputAddress2"
+                       placeholder="улица, дом, квартира">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Пароль</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Запомнить меня
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                           value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Опция 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                           value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                        Опция 2
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                           value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                        Опция 3
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

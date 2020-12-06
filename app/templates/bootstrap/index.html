@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <title>Bootstrap</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Меню</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active" href="#">Ссылка 1</a>
+                <a class="nav-item nav-link" href="#" target="_blank">Ссылка 2</a>
+                <a class="nav-item nav-link" href="#" target="_blank">Ссылка 3</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <h1>Bootstrap</h1>
+    <div class="mt-4">
+        <h2>Сетка и адаптивная верстка</h2>
+        <div class="row">
+            <div class="border col-12 col-md-8">Блок (.col-12 .col-md-8)</div>
+            <div class="border col-6 col-md-4">Блок (.col-6 .col-md-4)</div>
+        </div>
+
+        <div class="row">
+            <div class="border col-6 col-md-4">Блок (.col-6 .col-md-4)</div>
+            <div class="border col-6 col-md-4">Блок (.col-6 .col-md-4)</div>
+            <div class="border col-6 col-md-4">Блок (.col-6 .col-md-4)</div>
+        </div>
+
+        <div class="row">
+            <div class="border col-6">Блок (.col-6)</div>
+            <div class="border col-6">Блок (.col-6)</div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h2>Глифы</h2>
+        <div>
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/alarm.svg') }}" alt="" width="32" height="32"
+                 title="alarm">
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/arrow-90deg-down.svg') }}" alt="" width="32"
+                 height="32" title="arrow">
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/inbox-fill.svg') }}" alt="" width="32"
+                 height="32" title="inbox">
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/braces.svg') }}" alt="" width="32" height="32"
+                 title="braces">
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/shield-check.svg') }}" alt="" width="32"
+                 height="32" title="shield">
+            <img src="{{ url_for('static', filename='img/task_7_bootstrap/music-note.svg') }}" alt="" width="32"
+                 height="32" title="music-note">
+        </div>
+    </div>
+</div>
+<footer class="text-muted">
+    <div class="container text-center">
+        <p class="pt-3">© <a href="https://mvotinov.info" target="_blank">Michael Votinov</a> 2020</p>
+    </div>
+</footer>
+{% block javascript %}
+    <script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+{% endblock %}
+</body>
+</html>

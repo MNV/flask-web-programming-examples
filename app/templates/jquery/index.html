@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/task_4_jquery/styles.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{% block title %}jQuery: DOM, плагины и Ajax{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="mt-4">
+    <h2>Плагины</h2>
+</div>
+<div class="row justify-content-center">
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow" data-toggle="tooltip"
+         data-placement="right" title="Это подсказка, которая всплывает при наведении.">
+        <div class="">Наведите курсор на этот блок</div>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow pointer" data-toggle="popover"
+         title="Это подсказка"
+         data-content="Такая подсказка появляется при клике.
+             Здесь размещается текст, поясняющий смысл сообщения в блоке, по которому вы кликнули.">
+        <div>Кликните по этому блоку</div>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow pointer js-click">
+        <div>Клик</div>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow js-click-text">
+        <div>?</div>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow">
+        <div class="js-countdown"></div>
+    </div>
+</div>
+<div class="mt-4">
+    <h2>DOM</h2>
+</div>
+<div class="row justify-content-center js-new-blocks">
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        <div class="js-add-block">Кликните, чтобы добавить новый блок</div>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow pointer hidden js-block-copy">
+        <div class="content js-change-block"></div>
+    </div>
+</div>
+<div class="mt-4">
+    <h2>Ajax</h2>
+</div>
+<div class="row justify-content-center js-ajax-blocks">
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow pointer">
+        <div class="js-ajax-block">Кликните, чтобы загрузить информацию️</div>
+        <div class="mt-4 mb-4 hidden js-address-block">
+            <div class="input-group">
+                <input type="text" required="required" class="form-control js-address-value"
+                       placeholder="Город" value="Пермь">
+
+            </div>
+            <button class="btn btn-light mt-4 js-ajax-button">Получить прогноз погоды</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+<div id="getting-started"></div>
+
+{% block javascript %}
+{{ super() }}
+
+<script src="{{ url_for('static', filename='js/task_4_jquery/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/task_4_jquery/plugins/jquery.countdown-2.2.0/jquery.countdown.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/task_4_jquery/script.js') }}"></script>
+{% endblock %}

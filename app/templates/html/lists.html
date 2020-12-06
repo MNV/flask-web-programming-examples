@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}HTML: списки{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 align-self-center">
+        <h1>Списки</h1>
+        <h2>Упорядоченный список</h2>
+        <div class="mt-4 mb-3">
+            <ol type="I">
+                <li>Cras justo odio</li>
+                <li>Dapibus ac facilisis in</li>
+                <li>Morbi leo risus</li>
+                <li>Porta ac consectetur ac</li>
+                <li>Vestibulum at eros
+                    <ol>
+                        <li>Five.one
+                            <ol type="a">
+                                <li>Five.one.one</li>
+                                <li>Five.one.two</li>
+                            </ol>
+                        </li>
+                        <li>Five.two</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+        <h2>Неупорядоченный список</h2>
+        <div class="mt-4 mb-3">
+            <ul>
+                <li>Cras justo odio</li>
+                <li>Dapibus ac facilisis in</li>
+                <li>Morbi leo risus</li>
+                <li>Porta ac consectetur ac</li>
+                <li>Vestibulum at eros
+                    <ul>
+                        <li>Cras justo odio</li>
+                        <li>Dapibus ac facilisis in</li>
+                        <li>Morbi leo risus
+                            <ul>
+                                <li>Cras justo odio</li>
+                                <li>Dapibus ac facilisis in</li>
+                                <li>Morbi leo risus</li>
+                                <li>Porta ac consectetur ac</li>
+                                <li>Vestibulum at eros</li>
+                            </ul>
+                        </li>
+                        <li>Porta ac consectetur ac</li>
+                        <li>Vestibulum at eros</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <h2>Стилизованный неупорядоченный список</h2>
+        <div class="mt-4 mb-3">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                <li class="list-group-item list-group-item-action">Morbi leo risus</li>
+                <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
+                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+            </ul>
+        </div>
+        <h2>Список определений</h2>
+        <div class="mt-4 mb-3">
+            <dl>
+                <dt>GIF</dt>
+                <dd>Формат графических файлов, широко применяемый при создании сайтов.
+                    GIF использует 8-битовый цвет и эффективно сжимает сплошные цветные области,
+                    при этом сохраняя детали изображения.
+                </dd>
+                <dt>JPEG</dt>
+                <dd>Популярный формат графических файлов, широко применямый при создании
+                    сайтов и хранения изображений. JPEG поддерживает 24-битовый цвет и сохраняет
+                    яркость и оттенки цветов в фотографиях. Данный формат называют сжатием с потерями,
+                    поскольку алгоритм JPEG выборочно отвергает данные. Метод сжатия может исказить
+                    деталь в рисунке, особенно содержащий текст или изображение с четкими краями.
+                    Формат JPEG не поддерживает прозрачность, когда вы сохраняете фотографию в формате
+                    JPEG, прозрачные пиксели заполняются определенным цветом.
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+{% endblock %}

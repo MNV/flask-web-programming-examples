@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block header %}
+<h1>{% block title %}Web-программирование{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <div class="mb-2">HTML</div>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action"><a
+                    href="{{ url_for('html', template='blocks') }}">Блоки</a></li>
+            <li class="list-group-item list-group-item-action"><a
+                    href="{{ url_for('html', template='form') }}">Формы</a></li>
+            <li class="list-group-item list-group-item-action"><a
+                    href="{{ url_for('html', template='lists') }}">Списки</a></li>
+            <li class="list-group-item list-group-item-action"><a
+                    href="{{ url_for('html', template='table') }}">Таблицы</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('css') }}">CSS</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('javascript') }}">JavaScript</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('jquery') }}">jQuery</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('angularjs') }}">AngularJS</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('react') }}">React/Redux</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('bootstrap') }}">Bootstrap</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('sass') }}" target="_blank">Sass ❐</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('nodejs') }}">Node.js</a>
+    </div>
+    <div class="col-lg-6 rounded text-center m-4 p-4 shadow hover-scale">
+        <a href="{{ url_for('python') }}">Python</a>
+    </div>
+</div>
+{% endblock %}

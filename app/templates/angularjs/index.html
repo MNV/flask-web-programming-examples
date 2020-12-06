@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/task_5_angularjs/styles.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{% block title %}AngularJS{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<section ng-app="mainApp" ng-controller="marksController">
+    <h2 class="header subheader">Оценки за семестр</h2>
+    <div ng-app="mainApp" ng-controller="marksController">
+        <table border="0">
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" ng-model="student.firstName"></td>
+            </tr>
+            <tr>
+                <td>Фамилия:</td>
+                <td>
+                    <input type="text" ng-model="student.lastName">
+                </td>
+            </tr>
+            <tr>
+                <td>Студент:</td>
+                <td>[{ student.fullName() }]</td>
+            </tr>
+        </table>
+    </div>
+    <div class="tbl-header">
+        <table>
+            <thead>
+            <tr>
+                <th>Дисциплина</th>
+                <th>Преподаватель</th>
+                <th>Дата экзамена</th>
+                <th>Оценка</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    <input ng-model="f.subjectTitle">
+                </td>
+                <td>
+                    <input ng-model="f.teacher">
+                </td>
+                <td>
+                    <input ng-model="f.examDate">
+                </td>
+                <td>
+                    <input ng-model="f.examMark">
+                </td>
+            </tr>
+            <tr ng-repeat="subject in student.subjects | orderBy:orderByDate | filter:f">
+                <td>[{ subject.subjectTitle }]</td>
+                <td>[{ subject.teacher }]</td>
+                <td>[{ subject.examDate }]</td>
+                <td>[{ subject.examMark }]</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block javascript %}
+{{ super() }}
+
+<script src="{{ url_for('static', filename='js/task_5_angularjs/angular.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/task_5_angularjs/script.js') }}"></script>
+{% endblock %}

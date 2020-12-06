@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  {{ super() }}
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/task_2_css/styles.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{% block title %}CSS: адреса 3 видов, блочная модель и float{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="float-left border">Блок №1 (float-left)</div>
+    <div class="float-left border">Блок №2 (float-left)</div>
+    <div id="middle-block" class="clear-both border border-2">Блок №3 (clear-both)
+        <div class="color-red">Блок №3.1</div>
+    </div>
+    <div class="clear-both border">Блок №4 (clear-both)</div>
+    <div class="float-right border">Блок №5 (float-right)
+        <div>Блок №5.1
+            <div>Блок №5.1.1</div>
+        </div>
+    </div>
+    <div class="float-right border">Блок №6 (float-right)</div>
+    <div class="border">Блок №7</div>
+    <div class="clear-left border">Блок №8 (clear-left)</div>
+    <div class="clear-right border">Блок №9 (clear-right)</div>
+    <div class="border" custom="value">Блок №10</div>
+{% endblock %}
